@@ -1,0 +1,40 @@
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.1/camera_utils.js" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.2/drawing_utils.js" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose@0.2/pose.js" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/inspirit/jsfeat@master/build/jsfeat.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>WorkoutDemo</title>
+  </head>
+
+  <body>
+      <div class="container" style="margin-top: 20px;">
+        <canvas class="final" width="480px" height="480px" style="border:1px solid black;"></canvas>
+      </div>
+      <div class="container" style="margin-top: 20px;">
+        <label for="boxcontrolsSlider">Frame Size: <span id="boxcontrolsValue">35</span></label>
+        <input type="range" id="boxcontrolsSlider" min="5" max="200" value="35" step="1">
+        <br>
+        <label for="thicknessSlider">Skeleton Thickness: <span id="thicknessValue">1</span></label>
+        <input type="range" id="thicknessSlider" min="1" max="10" value="1" step="1">
+        <br>
+        <label for="framebordersSlider">Frame Thickness: <span id="framebordersValue">1</span></label>
+        <input type="range" id="framebordersSlider" min="5" max="20" value="5" step="1">
+        <br>
+        <label>
+          <input type="checkbox" id="toggleSkeleton"> Enable/Disable Skeleton
+      </label>
+      <br>
+        <label>
+          <input type="checkbox" id="toggleFrame"> Enable/Disable Frame
+      </label>
+      </div>
+      <script src="pose.js"></script>
+  </body>
+
+  </html>
