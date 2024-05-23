@@ -226,7 +226,7 @@ function onResultsPose(results) {
           img.data[i + 2] = blue + image.data[i + 2];
           img.data[i + 3] = 255;
       }
-      ctx.putImageData(img, 0, 0);
+      ctx.putImageData(img.scale(-1,0), 0, 0);
 
       offscreenCtx.restore(); 
       offscreenCtxm.restore(); 
@@ -250,7 +250,6 @@ const camera = new Camera(hiddenVideo, {
           console.error("Pose detection error:", error);
       }
   },
-  transform: scale(-1,0),
   width: 480,
   height: 480
 });
