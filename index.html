@@ -192,7 +192,7 @@ function onResultsPose(results) {
 
     canvasCtx.save();
     canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
-    canvasCtx.drawImage(results.image, canvas.width, 0, 0, canvas.height);
+    canvasCtx.drawImage(results.image, 0, 0,  canvas.width,canvas.height);
     if (skeleton){
     drawConnectors(canvasCtx, results.poseLandmarks, connections, {
       color: (data) => {
@@ -245,7 +245,7 @@ const hiddenVideo = document.createElement('video');
 const camera = new Camera(hiddenVideo, {
   onFrame: async () => {
       try {
-          await pose.send({ image: hiddenVideo });
+          await pose.send({ image: hiddenVideo.scale(-1, 1); });
       } catch (error) {
           console.error("Pose detection error:", error);
       }
