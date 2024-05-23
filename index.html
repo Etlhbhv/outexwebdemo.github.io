@@ -71,6 +71,7 @@ framebordersSlider.addEventListener("input", function() {
 const can = document.querySelector('.final');
 const ctx = can.getContext('2d');
 let img = ctx.getImageData(0, 0, can.width, can.height);
+img = img.scale(-1,1);
 
 const canvas = document.createElement('canvas');
 canvas.width = can.width;
