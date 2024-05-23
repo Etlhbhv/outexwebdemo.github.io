@@ -250,6 +250,7 @@ const camera = new Camera(hiddenVideo, {
           console.error("Pose detection error:", error);
       }
   },
+  transform: scaleX(-1),
   width: 480,
   height: 480
 });
