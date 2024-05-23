@@ -192,7 +192,7 @@ function onResultsPose(results) {
 
     canvasCtx.save();
     canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
-    canvasCtx.drawImage(results.image, 0, 0, canvas.width, canvas.height);
+    canvasCtx.drawImage(results.image, canvas.width, 0, 0, canvas.height);
     if (skeleton){
     drawConnectors(canvasCtx, results.poseLandmarks, connections, {
       color: (data) => {
