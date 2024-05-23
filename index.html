@@ -245,7 +245,7 @@ const hiddenVideo = document.createElement('video');
 const camera = new Camera(hiddenVideo, {
   onFrame: async () => {
       try {
-          await pose.send({ image: hiddenVideo.scale(-1, 1) });
+          await pose.send({ image: hiddenVideo });
       } catch (error) {
           console.error("Pose detection error:", error);
       }
